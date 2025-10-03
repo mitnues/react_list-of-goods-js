@@ -110,7 +110,7 @@ const isModified = sortKey !== 'initial' || isReversed;
           Reverse
         </button>
 
-        {/* The Reset button is only visible if the list order has been modified */}
+        
         {isModified && (
           <button
             type="button"
