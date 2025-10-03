@@ -42,7 +42,7 @@ const isModified = sortKey !== 'initial' || isReversed;
   const handleSort = (key) => {
     setSortKey(key);
     // When a new sort is applied, reset the reversal status
-    setIsReversed(false);
+    
   };
 
   // Handler for the Reverse button
@@ -124,14 +124,14 @@ const isModified = sortKey !== 'initial' || isReversed;
       </div>
 
       <ul className="box p-4">
-        {displayedGoods.map((good, index) => (
-          <li key={index} data-cy="Good" className="py-1">
+        {displayedGoods.map((good) => (
+          <li key={good} data-cy="Good" className="py-1">
             {good}
           </li>
         ))}
       </ul>
       <p className="has-text-grey-light is-size-7 mt-5">
-        Current Order: **{sortedKey.charAt(0).toUpperCase() + sortedKey.slice(1)}** {isReversed ? '(Reversed)' : ''}
+        Current Order: **{sortKey.charAt(0).toUpperCase() + sortKey.slice(1)}** {isReversed ? '(Reversed)' : ''}
       </p>
     </div>
 );
